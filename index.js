@@ -2,21 +2,22 @@ require('dotenv').config();
 const axios = require('axios');
 const cheerio = require('cheerio');
 const express = require('express');
+const config = require("./config.json")
 const app = express();
-const url = 'https://www.thetechwire.com/'
 
-axios(url)
+
+axios(config.url)
     .then((res) => {
         const data = res.data;
         const $ = cheerio.load(data)
         // console.log(data)
         const d = []
-        $('.entry-title', data).each(function(){
+        $(config.target? config.target : "div", data).each(function(){
             const title = $(this).text();
-            const urll = $(this).find('a').attr('href')
+            const url = $(this).find('a').attr('href')
             d.push({
                 title,
-                urll
+                url
             });
         })
         console.log(d)
