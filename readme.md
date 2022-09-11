@@ -3,8 +3,8 @@
 ### SETUP
 Change the `Target` & `URL` in `config.json` File
 Where:
-- Target => The HTML Class/ID/Element you want to Catch. (Leave Blank if you want the whole HTML Page.)
-- URL => The URL you want to Scrape.
+- Target ➡ The HTML Class/ID/Element you want to Catch. (Leave Blank if you want the whole HTML Page.)
+- URL ➡ The URL you want to Scrape.
 
 ### TODO:
 - Scrapper API (Comming very soon)
